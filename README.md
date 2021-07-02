@@ -17,3 +17,11 @@ Each entry in my dataset contains the relevant information to a single flight, i
 #### **[Data acquisition and cleaning](data-acquisition-cleaning.ipynb)**
 
 You can use this link to access the code for downloading the raw data and cleaning it.
+
+#### **[Exploratory Data Analysis](exploratory-data-analysis.ipynb)**
+
+This notebook contains the code and the analysis of data.
+
+#### **[Optimum Data Size](optimum-data-size.ipynb)**
+
+This link gives you access to a quick study of the effect of training data size on model score and scalability.
