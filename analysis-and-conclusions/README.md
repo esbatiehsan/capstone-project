@@ -8,8 +8,9 @@ Nonetheless, cleaning the raw data still posed some challenges, especially the d
 The data also contained information related to other aspects of each recording, mixed with the actual data, and presented as strings. For example, the amount of liquid precipitation at a given time and place was presented as "01,0000,0,0". The four different fields separated my comma represent, from left to right, Period Quantity, Depth Dimension, Condition Code, Quality Code. The have the following definitions:
 <ul>
     <li>Period Quantity: The quantity of time over which the liquid precipitation was measured.</li>
-    <li>Depth Dimension: The depth of liquid precipitation that is measured at the time of each observation.</li>
+    <li>Depth Dimension: The depth of liquid precipitation that is measured at the time of each observation, in millimetres.</li>
     <li>Condition Code: The code that denotes whether a liquid precipitation depth dimension was a trace value.</li>
     <li>Quality Code: The code that denotes a quality statues of the reported liquid precipitation data.</li>
 </ul>
+
 First, apart form the hourly data, there were some additional aggregate data too, such as 3, 6, and 24-hourly aggregates. These had to be discovered and dropped.
