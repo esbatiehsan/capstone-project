@@ -29,3 +29,8 @@ The highest correlation can be seen between the labels and the reported weather 
 One interesting weather feature turned out to be wind direction which has a strong local element to it, with different airports reporting different fraction of delays for different wind directions.
 
 Considering the flight related features, only the scheduled hour of flight displays a clear pattern when it comes to fraction of flights that were delayed, with a gradual increase in delayed flights as we move towards early evening. Other features such as scheduled month and day of flight show much less obvious trends.
+
+### Optimum Training Set size
+While exploring the data, it was quite clear that the sheer size of my dataset was going to pose a significant computational challenge. This was confirmed during quick benchmarking tests, with some ensemble models, such as RandomForestClassifier, requiring long periods of computation during fit. The problem was only going to get a lot worse if hyper-parameter optimisation were to be attempted.
+
+Given this evidence, and the limited available time, I decided to find out the optimum size for a training set. Using the learning_curve module from scikit-learn, I tested two different models, one KNeighborsClassifier and one DecisionTreeClassifier, on a reduced dataset in order to gauge not only the influence of training set size on cross-validated score, but also each model's scalability. This test showed either no significant improvement in cross-validated score in the case of KNeighborsClassifier or a significant increase in fit time in the case of DecisionTreeClassifier, far outweighing any gain in performance. Consequently, I decided to reduce the overall size of my data to just 1%.
