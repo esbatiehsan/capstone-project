@@ -19,4 +19,13 @@ Next, it became apparent that some observations were completely missing, perhaps
 
 The carrier on-time performance data downloaded form BTS website was far more straight forward to work with. The only noteworthy issue was the extraction of weather related delays from National Aviation System delays. This was done using the monthly nationwide percentage provided by BTS. Unfortunately, no further granular data was available.
 
-Once the two separate sets were prepared, they were joined together to form a single dataset. You can refer to the Data Dictionary page for a complete breakdown of all individual columns.   
+Once the two separate sets were prepared, they were joined together to form a single dataset. You can refer to the Data Dictionary page for a complete breakdown of all individual columns.
+
+### Data Exploration
+While exploring the data I quickly realised there are no large correlation between the binary labels and the various weather and flight related features. For example, wind speed is a major cause of flight delay as high winds make both take-off and landing tricky, but the data showed there is minimal separation between wind speeds related to the two labels.
+
+The highest correlation can be seen between the labels and the reported weather condition, with snowfall and heavy snowfall resulting in highest percentage of delayed flights, followed by thunderstorms with different strengths. Meanwhile, delays caused by various intensity of rainfall follows the overall average.
+
+One interesting weather feature turned out to be wind direction which has a strong local element to it, with different airports reporting different fraction of delays for different wind directions.
+
+Considering the flight related features, only the scheduled hour of flight displays a clear pattern when it comes to fraction of flights that were delayed, with a gradual increase in delayed flights as we move towards early evening. Other features such as scheduled month and day of flight show much less obvious trends.
