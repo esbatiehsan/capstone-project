@@ -44,5 +44,6 @@ The columns for my dataset are as follows:
   <li>day: scheduled day of flight</li>
   <li>day_of_week: scheduled weekday of flight</li>
   <li>hour: scheduled hour of flight</li>
+</ul>
 
 It is important to mention that not all these columns were used for modelling the data as some are highly correlated with the target variable, while others offered no additional information when considering departure delays.
