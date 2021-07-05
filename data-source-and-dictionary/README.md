@@ -25,6 +25,24 @@ The columns for my dataset are as follows:
   <li>visibility: horizontal distance reported for each observation, metres</li>
   <li>wind_speed: wind speed reported for each observation, metres per second</li>
   <li>wind_direction: wind dircetion reported for each observation</li>
-  <li>dep_delay: total time each flight was delayed for, minutes</li>
-  <li>carrier_delay: total time each flight was delayed for because of carrier issues, minutes</li>
-  <li>extreme_weather_delay: total time each flight was delayed for because of extreme weather events, minutes</li> 
+  <li>dep_delay: total time each flight was delayed by at departure, minutes</li>
+  <li>carrier_delay: total time each flight was delayed by because of carrier issues, minutes</li>
+  <li>extreme_weather_delay: total time each flight was delayed by because of extreme weather events, minutes</li>
+  <li>weather_delay: total time each flight was delayed by because of normal weather events, minutes</li>
+  <li>nas_delay: total time each flight was delayed by because of national aviation system events, minutes</li>
+  <li>security_delay: total time each flight was delayed by because of security events, minutes</li>
+  <li>lat_aircraft_delay: total time each flight was delayed by because of late aircraft arrival, minutes</li>
+  <li>cancelled: whether flight was cancelled or not</li>
+  <li>cancellation_code: unique identifier indicating why flight was cancelled</li>
+  <li>diverted: whether flight was diverted to another airport or not</li>
+  <li>destination: unique identifier code for destination airport</li>
+  <li>arr_delay: total time each flight was delayed by at arrival, minutes</li>
+  <li>air_time: total time each flight was in the air, minutes</li>
+  <li>distance: total distance between origin and destination, kilometres</li>
+  <li>dep_15_del: binary label indicating whether departure was delayed by more than fifteen minutes or not</li>
+  <li>month: scheduled month of flight</li>
+  <li>day: scheduled day of flight</li>
+  <li>day_of_week: scheduled weekday of flight</li>
+  <li>hour: scheduled hour of flight</li>
+
+It is important to mention that not all these columns were used for modelling the data as some are highly correlated with the target variable, while others offered no additional information when considering departure delays.
