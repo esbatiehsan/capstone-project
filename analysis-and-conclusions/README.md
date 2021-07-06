@@ -34,3 +34,13 @@ Considering the flight related features, only the scheduled hour of flight displ
 While exploring the data, it was quite clear that the sheer size of my dataset was going to pose a significant computational challenge. This was confirmed during quick benchmarking tests, with some ensemble models, such as RandomForestClassifier, requiring long periods of computation during fit. The problem was only going to get a lot worse if hyper-parameter optimisation were to be attempted.
 
 Given this evidence, and the limited available time, I decided to find out the optimum size for a training set. Using the learning_curve module from scikit-learn, I tested two different models, one KNeighborsClassifier and one DecisionTreeClassifier, on a reduced dataset in order to gauge not only the influence of training set size on cross-validated score, but also each model's scalability. This test showed either no significant improvement in cross-validated score in the case of KNeighborsClassifier or a significant increase in fit time in the case of DecisionTreeClassifier, far outweighing any gain in performance. Consequently, I decided to reduce the overall size of my data to just 1%.
+
+### Modelling
+
+### Limitations
+
+### Future Work
+<ul>
+  <li>Try to expand the predictor features by adding further weather information related to each destination, and try to account for the snowballing of delays caused by adverse weather conditions but not necessarily reflected in the weather data.</li>
+  <li>Implement more sophisticated models such as SVMs and NNs on an expanded dataset.</li>
+  <li>Convert the most accurate model into a web application that would predict the possibility of delay based on user-supplied weather and flight features that can be utilised when purchasing tickets.</li>
