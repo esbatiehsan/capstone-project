@@ -14,7 +14,11 @@ Each entry in my dataset contains the relevant information to a single flight, i
 
 ### Repository Content:
 
-#### **[Data acquisition and cleaning](data-acquisition-cleaning.ipynb)**
+#### **[Data Source and Dictionary](./data-source-and-dictionary)**
+
+Access the two major sources of data I used in this project and also a short description for each of the columns present in the cleaned dataset.
+
+#### **[Data Acquisition and Cleaning](data-acquisition-cleaning.ipynb)**
 
 You can use this link to access the code for downloading the raw data and cleaning it.
 
@@ -25,3 +29,11 @@ This notebook contains the code and the analysis of data.
 #### **[Optimum Data Size](optimum-data-size.ipynb)**
 
 This link gives you access to a quick study of the effect of training data size on model score and scalability.
+
+#### **[Modelling]()**
+
+Follow this link to access the modelling section of this project.
+
+#### **[Analysis and Conclusions](./analysis-and-conclusions)**
+
+A brief discussion of methods used and choices made during this project and a look at future ideas to take it forward.
