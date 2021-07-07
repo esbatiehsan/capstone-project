@@ -30,7 +30,7 @@ This notebook contains the code and the analysis of data.
 
 This link gives you access to a quick study of the effect of training data size on model score and scalability.
 
-#### **[Modelling]()**
+#### **[Modelling](modelling.ipynb)**
 
 Follow this link to access the modelling section of this project.
 
