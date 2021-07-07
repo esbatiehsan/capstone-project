@@ -18,7 +18,7 @@ Each entry in my dataset contains the relevant information to a single flight, i
 
 Access the two major sources of data I used in this project and also a short description for each of the columns present in the cleaned dataset.
 
-#### **[Data acquisition and cleaning](data-acquisition-cleaning.ipynb)**
+#### **[Data Acquisition and Cleaning](data-acquisition-cleaning.ipynb)**
 
 You can use this link to access the code for downloading the raw data and cleaning it.
 
