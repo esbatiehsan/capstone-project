@@ -36,8 +36,48 @@ While exploring the data, it was quite clear that the sheer size of my dataset w
 Given this evidence, and the limited available time, I decided to find out the optimum size for a training set. Using the learning_curve module from scikit-learn, I tested two different models, one KNeighborsClassifier and one DecisionTreeClassifier, on a reduced dataset in order to gauge not only the influence of training set size on cross-validated score, but also each model's scalability. This test showed either no significant improvement in cross-validated score in the case of KNeighborsClassifier or a significant increase in fit time in the case of DecisionTreeClassifier, far outweighing any gain in performance. Consequently, I decided to reduce the overall size of my data to just 1%.
 
 ### Modelling
+After considering the results from the EDA section, I decided to concentrate on optimising a DecisionTreeClassifier and a KNeighborsClassifier. This decision was based on the low separability of two labels, which means some models should, in theory, perform better.
+
+I also had to account for the severe imbalance seen between the two labels, and decided to integrate a RandomOverSampler into my modelling by utilising a pipeline accordingly.
+
+The following metrics were achieved by hyper-parameter optimisation:
+<ul>
+  <li>DecisionTreeClassifier
+    <ul>
+      <li>Accuracy: 0.371</li>
+      <li>Class 1 Precision: 0.208</li>
+      <li>Class 1 Recall: 0.877</li>
+    </ul>
+  </li>
+  <li>KNeighborsClassifier
+    <ul>
+      <li>Accuracy: 0.586</li>
+      <li>Class 1 Precision: 0.229</li>
+      <li>Class 1 Recall: 0.538</li>
+    </ul>
+  </li>
+</ul>
+
+As we can see, DecisionTreeClassifier scores higher for Recall, while the KNeighborsClassifier achieves an slightly better Precision for considerably worse Recall score. However, KNeighborsClassifier is significantly more accurate, meaning it gets more correct predictions out of all possible predictions.
+
+Regardless of how these two models compare with each other, it is clear that neither perform to a high standard. Conseuently, I decided to implement an ensemble model, namely a VotingClassifier. I retained the two previously used models as base estimators and added two more: a LogisticRegression and a GaussianNB. The basic assumption is that each of these models have different strengths and sum of those strengths should result in better outcomes. Optimising this model yielded the following results:
+<ul>
+  <li>VotingClassifier
+    <ul>
+      <li>Accuracy: 0.671</li>
+      <li>Class 1 Precision: 0.271</li>
+      <li>Class 1 Recall: 0.475</li>
+    </ul>
+  </li>
+</ul>
+
+Even though my criterion for hyper-parameter optimisation was the Recall score, it is clear from these results that any noteworthy increase in Recall score has a significant on Accuracy, and to a lesser extent on Precision. Given this dynamic, it appears to me that the most useful metric for model selection is Accuracy, offering the best balance between true positives and true negatives.
+
+Using this metric, it is clear that the VotingClassifier performs best and should be one of the models revisited in the future.
 
 ### Limitations
+
+
 
 ### Future Work
 <ul>
