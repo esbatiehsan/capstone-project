@@ -76,11 +76,16 @@ Even though my criterion for hyper-parameter optimisation was the Recall score, 
 Using this metric, it is clear that the VotingClassifier performs best and should be one of the models revisited in the future.
 
 ### Limitations
-
-
+For a model to be useful for various stakeholders, it has to fulfil a certain criteria based on predefined requirements. In this particular case, that criteria is accuracy. The model should be able to accurately judge whether a specific flight will be delayed or not. Higher accuracy provides more useful information for various stakeholders, including airline operators, airport operators, and the potential passengers. Given the definition of accuracy, that is the percentage of correct predictions out of all possible predictions, we can say the following about the model and how it can affect different stakeholders:
+<ul>
+  <li>It labels a large portion of on-time flights as delayed, meaning any passenger using this model to make decisions regarding ticket purchase could be turned away from certain flights. The model also fails to accurately classify a large portion of delayed flights, labelling them as on-time. The effect of this double shortcoming is that the probability  of passengers choosing a flight that will ultimately be delayed over a flight that will end up being on-time is simply too large to be acceptable.</li>
+  <li>The large portion of wrongly labeled on-time flights can also mean low passenger numbers, resulting in sub-optimal fuel efficiency and lower profit margins given the fixed nature of many associated costs.</li>
+  <li>The same dynamic also applies to airline and airport operators. Using this model to predict which flights will be delayed in order put in place contingency plans and alleviating measures can lead to an unacceptable high percentage of wrong decisions. This would have a certain cost associated with it that could potentially negate any benefits for these stakeholders.  
+</ul>
 
 ### Future Work
 <ul>
+  <li>Redefine the optimisation criteria to better match the ultimate needs of various stakeholders</li>
   <li>Try to expand the predictor features by adding further weather information related to each destination, and try to account for the snowballing of delays caused by adverse weather conditions but not necessarily reflected in the weather data.</li>
   <li>Implement more sophisticated models such as SVMs and NNs on an expanded dataset.</li>
   <li>Convert the most accurate model into a web application that would predict the possibility of delay based on user-supplied weather and flight features that can be utilised when purchasing tickets.</li>
