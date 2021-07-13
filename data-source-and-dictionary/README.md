@@ -3,9 +3,9 @@
 ### Data Source
 The majority of data used in this project was acquired from two separate sources.
 
-National Climatic Data Center was the source of hourly weather data. This [dataset](https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00532/html) can be accessed for different stations via the official API.
+The National Climatic Data Center was the source of hourly weather data. This [dataset](https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C00532/html) can be accessed for different stations via the official API.
 
-Airline on-time performance data was sourced form the Bureau of Transportation Statistics via its [website](https://www.transtats.bts.gov/DL_SelectFields.asp?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr).
+Airline on-time performance data was sourced from the Bureau of Transportation Statistics via its [website](https://www.transtats.bts.gov/DL_SelectFields.asp?gnoyr_VQ=FGJ&QO_fu146_anzr=b0-gvzr).
 
 ### Data Dictionary
 The columns for my dataset are as follows:
@@ -24,7 +24,7 @@ The columns for my dataset are as follows:
   <li>air_temp: air temperature reported for each observation, degrees celsius</li>
   <li>visibility: horizontal distance reported for each observation, metres</li>
   <li>wind_speed: wind speed reported for each observation, metres per second</li>
-  <li>wind_direction: wind dircetion reported for each observation</li>
+  <li>wind_direction: wind direction reported for each observation</li>
   <li>dep_delay: total time each flight was delayed by at departure, minutes</li>
   <li>carrier_delay: total time each flight was delayed by because of carrier issues, minutes</li>
   <li>extreme_weather_delay: total time each flight was delayed by because of extreme weather events, minutes</li>

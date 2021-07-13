@@ -58,9 +58,9 @@ The following metrics were achieved by hyper-parameter optimisation:
   </li>
 </ul>
 
-As we can see, DecisionTreeClassifier scores higher for Recall, while the KNeighborsClassifier achieves an slightly better Precision for considerably worse Recall score. However, KNeighborsClassifier is significantly more accurate, meaning it gets more correct predictions out of all possible predictions.
+As we can see, DecisionTreeClassifier scores higher for Recall, while the KNeighborsClassifier achieves a slightly better Precision for considerably worse Recall score. However, KNeighborsClassifier is significantly more accurate, meaning it gets more correct predictions out of all possible predictions.
 
-Regardless of how these two models compare with each other, it is clear that neither perform to a high standard. Conseuently, I decided to implement an ensemble model, namely a VotingClassifier. I retained the two previously used models as base estimators and added two more: a LogisticRegression and a GaussianNB. The basic assumption is that each of these models have different strengths and sum of those strengths should result in better outcomes. Optimising this model yielded the following results:
+Regardless of how these two models compare with each other, it is clear that neither perform to a high standard. Consequently, I decided to implement an ensemble model, namely a VotingClassifier. I retained the two previously used models as base estimators and added two more: a LogisticRegression and a GaussianNB. The basic assumption is that each of these models have different strengths and sum of those strengths should result in better outcomes. Optimising this model yielded the following results:
 <ul>
   <li>VotingClassifier
     <ul>
